@@ -1,0 +1,141 @@
+.new_project {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    padding-top: 100px;
+    line-height: 2rem;
+    font-family: Arial;
+    border: 0px;
+}
+
+.new_project td {
+    border: 0px;
+    text-align: left;
+}
+
+.new_project th {
+    font-size: 20px;
+    border: 0px;
+    text-align: center;
+}
+
+.button {
+    text-align: right;
+    padding-top: 10px;
+}
+
+button {
+    background: lightgrey;
+    border: solid 1px black;
+    text-decoration: none;
+    font-family: Arial;
+    color: black;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 6px 16px 6px;
+    width: 100%;
+}
+
+button:hover {
+    background: grey;
+}
+
+input[type="text"], input[type="number"], select, option{
+    line-height: 1.5rem;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.project_status {
+    margin-left: 10%;
+}
+
+.students, .projects {
+    border-collapse: collapse;
+    width: 40%;
+    float: left;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 100px;
+    line-height: 2rem;
+    font-family: Arial;
+}
+
+.students th, td {
+    border: 2px solid #c1c1c1;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.add_student td{
+    padding-top: 10px;
+    border: 0px;
+}
+
+.students th {
+    background: lightgrey;
+}
+
+.project_info {
+    font-family: Arial;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: Arial;
+    font-weight: normal;
+    clear: both;
+    padding: 15px 0px 0px;
+}
+
+.group_table {
+    border-collapse: collapse;
+    line-height: 2rem;
+    font-family: Arial;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    width: 45%;
+    float: left;
+}
+
+.group_table th, td {
+    border: 2px solid #c1c1c1;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.group_table th {
+    background: lightgrey;
+}
+
+.groups {
+    width: 40%;
+}
+
+.back {
+    width: 100px;
+    float: right;
+    margin: 10px;
+}
+
+.projects_page {
+    margin-left: 10%;
+}
+
+.projects {
+    clear: both;
+    width: 50%;
+}
+
+.projects th, td {
+    border: 2px solid #c1c1c1;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.projects th {
+    background: lightgrey;
+}

@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>New Project</title>
+        <script type="text/javascript" src="code.js"></script>
+        <link rel="stylesheet" th:href="@{/style.css}">
+    </head>
+    <body>
+    <table class="new_project">
+        <thead>
+        <tr>
+            <th colspan="2">New Project</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="2">Project Name</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" maxlength="40" id="name"/></td>
+        </tr>
+        <tr>
+            <td>Number of Groups</td>
+            <td>Students Per Group</td>
+        </tr>
+        <tr>
+            <td><input type="number" min="1" id="num_groups" value="1"/></td>
+            <td><input type="number" min="1" id="num_students" value="1"/></td>
+        </tr>
+        <tr>
+            <td class="button"><button onclick="location.href='view'">View Projects</button></td>
+            <td class="button"><button onclick="createProject()">Create Project</button></td>
+        </tr>
+        </tbody>
+    </table>
+    </body>
+</html>

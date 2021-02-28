@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Project Status</title>
+    <script type="text/javascript" th:src="@{/code.js}"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+    <body class="project_status">
+<!--        <p th:text="${'Project: ' + project.name}"></p>-->
+<!--        <p th:text="${'Number of Groups: ' + project.num_groups}"></p>-->
+<!--        <p th:text="${'Students Per Group: ' + project.num_students}"></p>-->
+    <button class="back" onclick="location.href='/'">Back</button>
+    <div class="project_info">
+            <h1>Project Status</h1>
+            <p>Project: <strong th:text="${project.name}"></strong></p>
+            <p>Number of Groups: <strong th:text="${project.num_groups}"></strong></p >
+            <p>Students Per Group: <strong th:text="${project.num_students}"></strong></p>
+        </div>
+        <h1>Students</h1>
+        <table class="students" id="students">
+            <thead>
+            <tr>
+                <th>Student</th>
+                <th>Group</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="entry : ${project.students}" th:id="|row_${entry.id}|">
+                <td th:text="${entry.name}"></td>
+                <td th:text="${entry.studentGroup.name}"></td>
+                <td><a th:attr="onclick=|removeStudent(${entry.id})|" href="#">Delete</a></td>
+            </tr>
+            <tr class="add_student">
+                <td><input type="text" maxlength="20" id="name"/></td>
+                <td colspan="2"><button th:attr="onclick=|addStudent(${project.id})|">Add Student</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="groups">
+        <h1>Groups</h1>
+            <table class="group_table" th:each="entry : ${project.studentGroups}">
+                <thead>
+                <tr>
+                    <th th:text="${entry.name}"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="student : ${entry.students}" th:class="|row_${entry.id}|">
+                    <td>
+                    <select name="assigned_student">
+                        <option selected disabled hidden>Assign Student</option>
+                        <option th:each="student_names : ${project.students}" th:value="${student_names.id}" th:text="${student_names.name}"></option>
+                    </select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
